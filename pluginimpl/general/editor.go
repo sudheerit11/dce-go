@@ -185,7 +185,7 @@ func updateServiceSessions(serviceName, file, executorId, taskId string, filesMa
 	// Add cgroup parent
 	path, _ := filepath.Abs("")
 	dirs := strings.Split(path, PATH_DELIMITER)
-	containerDetails[types.CGROUP_PARENT] = "/mesos/" + dirs[len(dirs)-1]
+	//containerDetails[types.CGROUP_PARENT] = "/mesos/" + dirs[len(dirs)-1]
 	logger.Println("Edit Compose File : Add cgroup parent /mesos/", dirs[len(dirs)-1])
 
 	// Update value of PORTS
